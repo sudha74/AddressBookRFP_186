@@ -18,9 +18,9 @@ public class AddressBook {
                 case 2:
                     add.editContact();
                     break;
-//                case 3:
-//                    add.displayContacts();
-//                    break;
+                case 3:
+                    add.displayContacts();
+                    break;
                 case 4:
                     add.deleteContact();
                     break;

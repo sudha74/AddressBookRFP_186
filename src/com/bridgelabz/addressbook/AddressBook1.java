@@ -36,7 +36,7 @@ public class AddressBook1 {
         String firstName = scanner.next().toLowerCase();
 
         boolean found = false;
-        for (Contacts contact : list)
+        for (Contacts contact : list) {
             if (firstName.equals(contact.getFirstName().toLowerCase())) {
                 System.out.println("Edit the details of person");
                 System.out.println("Enter first name:");
@@ -66,6 +66,7 @@ public class AddressBook1 {
                 found = true;
                 break;
             }
+        }
         if (!found) {
             System.out.println("No contact found");
         }
@@ -83,21 +84,24 @@ public class AddressBook1 {
                 System.out.println("Contacts deleted Successfully");
                 break;
             }
-            if (!found) {
-                System.out.println("No contact found");
-            }
+        }
+        if (!found) {
+            System.out.println("No contact found");
+        }
+    }
 
-//            void displayContacts() {
-                if (list.isEmpty()) {
-                    System.out.println("No contacts to display");
-                } else {
-                    for (Contacts contacts : list) {
-                        System.out.println(contact);
-                    }
-                }
+    void displayContacts() {
+        if (list.isEmpty()) {
+            System.out.println("No contacts to display");
+        } else {
+            for (Contacts contacts : list) {
+                System.out.println(contacts);
             }
         }
     }
+}
+
+
 
 
 
